@@ -29,7 +29,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  db.get(req.body)
+  db.insert(req.body)
     .then(project => res.status(200).json(project))
     .catch(err =>
       res
@@ -64,19 +64,20 @@ router.delete("/:id", (req, res) => {
     );
 });
 
-router
-  .get("/:id/actions", (req, res) => {
-    db.getProjectActions(req.params.id).then(project =>
+router.get("/:id/actions", (req, res) => {
+  db.getProjectActions(req.params.id)
+    .then(project =>
       !project.length
         ? res.status(404).send("no actions found for project")
         : res.status(200).json(project)
+    )
+    .catch(err =>
+      res.status(500).json({
+        errorMessage: "unable to retrieve project actions",
+        error: err
+      })
     );
-  })
-  .catch(err =>
-    res
-      .status(500)
-      .json({ errorMessage: "unable to retrieve project actions", error: err })
-  );
+});
 
 router.use("/", (req, res) => {
   res.status(200).send("project router working");

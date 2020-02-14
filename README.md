@@ -55,13 +55,22 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+  <!--! middleware, Routing -->
+
 - [ ] Describe Middleware?
+
+  <!--! Middleware is software that runs between the api call and rest of the function. Adds in additional software -->
 
 - [ ] Describe a Resource?
 
+  <!--! Everything in the DB -->
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+  <!--! It can return a status code, res.status(200) others  -->
+
 - [ ] How can we partition our application into sub-applications?
+  <!--! Routes, servers, components... -->
 
 ## Minimum Viable Product
 

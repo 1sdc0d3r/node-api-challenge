@@ -12,12 +12,12 @@ server.use(helmet());
 server.use(morgan("combined"));
 
 server.use("/api/actions", actionRoutes);
-server.use("/api/actions", projectRoutes);
+server.use("/api/projects", projectRoutes);
 
 server.use("/", (req, res) => {
-  res.status(200).send("API is working");
+  res.status(200).send("API is working, router catch");
 });
 
 server.listen(port, () => {
-  `server is listening on port ${port}`;
+  console.log(`server is listening on port ${port}`);
 });

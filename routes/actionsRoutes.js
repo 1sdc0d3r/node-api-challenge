@@ -29,7 +29,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  db.get(req.body)
+  db.insert(req.body)
     .then(action => res.status(200).json(action))
     .catch(err =>
       res
