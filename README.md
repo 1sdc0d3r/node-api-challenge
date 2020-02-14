@@ -1,5 +1,20 @@
 # Sprint Challenge: Express and Node.js - Projects & Actions
 
+<!-- /*
+play this: https://www.youtube.com/watch?v=d-diB65scQU
+
+Sing along:
+
+here's a little code I wrote, please read the README word for word, don't worry, you got this
+in every task there may be trouble, but if you worry you make it double, don't worry, you got this
+ain't got no sense of what is REST? just concentrate on learning Express, don't worry, you got this
+your file is getting way too big, bring a Router and make it thin, don't worry, be crafty
+there is no data on that route, just write some code, you'll sort it out… don't worry, just hack it…
+I need this code, but don't know where, perhaps should make some middleware, don't worry, just hack it
+
+Go code!
+*/ -->
+
 ## Description
 
 In this challenge, you design and create a web API to manage the following resources: `Projects` and `Actions`.
@@ -40,13 +55,22 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+  <!--! middleware, Routing -->
+
 - [ ] Describe Middleware?
+
+  <!--! Middleware is software that runs between the api call and rest of the function. Adds in additional software -->
 
 - [ ] Describe a Resource?
 
+  <!--! Everything in the DB -->
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+  <!--! It can return a status code, res.status(200) others  -->
+
 - [ ] How can we partition our application into sub-applications?
+  <!--! Routes, servers, components... -->
 
 ## Minimum Viable Product
 
