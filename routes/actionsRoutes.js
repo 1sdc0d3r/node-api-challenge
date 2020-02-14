@@ -41,6 +41,9 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
   const { id } = req.params;
   const update = req.body;
+  db.get(id).then(action => {
+    if (!action.length) res.status(404).send("action not found w/ Id");
+  });
   db.update(id, update)
     .then(action => res.status(200).json(action))
     .catch(err =>

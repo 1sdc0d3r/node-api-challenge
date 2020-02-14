@@ -13,11 +13,16 @@ const ProjectList = () => {
   return (
     <div className="projects">
       {projects.map(e => (
-        <Link to={`/projects/${e.id}`}>
-          <h3>
-            {e.name}: {e.completed}
-          </h3>
-        </Link>
+        <div>
+          <Link to={`/projects/${e.id}`}>
+            <h3>
+              {e.name}: {e.completed ? "true" : "false"}
+            </h3>
+          </Link>
+          <Link to={`/projects/${e.id}/edit`}>
+            <button>Edit</button>
+          </Link>
+        </div>
       ))}
     </div>
   );
